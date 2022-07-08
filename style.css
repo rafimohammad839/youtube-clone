@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  padding: 20px 0px 0px 10px;
+  display: flex;
+}
+
+aside .sidebar {
+  --sidebar-width: 60px;
+  max-width: --sidebar-width;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar i {
+  font-size: .75rem;
+  text-align: center;
+  font-style: normal;
+}
+
+.sidebar i p {
+  font-size: 0.53rem;
+}
+
+.main-container {
+  width: 94vw;
+  margin-left: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.youtube-logo img {
+  max-width: 60%;
+}
+
+.search-box {
+  width: 510px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box .input-field {
+  display: flex;
+}
+
+input {
+  border: 1px solid #E1E1E1;
+  width: 400px;
+  padding: 7px 12px;
+  font-size: 17px;
+  z-index: 1;
+}
+
+input:focus {
+  border-color: #86b6fe;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(110, 13, 253, 0.75);
+}
+
+button {
+  padding: 2px 10px;
+  border: none;
+}
+
+.mic {
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+}
+
+.other-icons {
+  display: flex;
+  min-width: 170px;
+  justify-content: space-between;
+}
+
+.other-icons i img {
+  max-width: 28px;
+}
+
+i:hover,
+img:hover {
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  gap: 13px;
+  margin: 10px 0;
+}
+
+.tags .tag {
+  font-size: 14px;
+  background-color: #E1E1E1;
+  border-radius: 20px;
+  padding: 8px 15px;
+  border: 1px solid #A7A7A7;
+  cursor: pointer;
+}
+
+.tags .tag.active {
+  background-color: black;
+  color: #eee;
+  border: none;
+}
+
+.videos-section {
+  min-height: 90vh;
+  width: 100%;
+  background-color: #E5E5E5;
+  padding: 20px 5px 0 20px;
+}
+
+.thumbnail-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnail-image img {
+  width: 300px;
+}
+
+.thumbnail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.thumbnail-content .heading img {
+  display: block;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.thumbnail-content .heading {
+  display: flex;
+  gap: 10px;
+}
+
+.heading h3 {
+  font-size: 15px;
+}
+
+.thumbnail-content .views {
+  padding-left: 35px;
+  display: flex;
+  gap: 8px;
+}
+
+.views p {
+  font-size: 11px;
+}
+
+.thumbnail-content .sub-heading {
+  font-size: 13px;
+  padding-left: 35px;
+}
+
+.videos-section .grid {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 310px);
+}
+
+@media only screen and (max-width: 768px) {
+
+  .videos-section .grid {
+    gap: 3px;
+    grid-template-columns: repeat(2, 310px);
+  }
+
+}
+
+@media only screen and (max-width: 381px) {
+
+  .videos-section .grid {
+    gap: 3px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
